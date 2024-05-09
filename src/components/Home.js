@@ -1,11 +1,5 @@
+import { Navigate } from "react-router-dom";
 
-
-function Home() {
-  return (
-    <main>
-      <h1>Home!</h1>
-    </main>
-  );
+function Component({ isLoggedIn }) {
+  return isLoggedIn ? <Navigate to="/" /> : null;
 }
-
-export default Home;
